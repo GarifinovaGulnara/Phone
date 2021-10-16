@@ -48,22 +48,16 @@ namespace Phone
 
         private void Otchet_Click(object sender, EventArgs e)
         {
-            string[] allDan = Base.Text.Split(',');
-        }
+            string[] allDan = Base.Text.Split(',', '\n');
+            string phone = Convert.ToString(allDan[0]);
+            string phone2 = Convert.ToString(allDan[1]);
+            DateTime date = Convert.ToDateTime(allDan[2]);
+            int time_second = Convert.ToInt32(allDan[3]);
 
-        struct Dann
-        {
-            public string phone;
-            public string phone2;
-            public DateTime date;
-            public int time_second;
-
-            public Dann (string phone, string phone2, DateTime date, int time_second)
+            int countPhone = 0;
+            if ()
             {
-                this.phone = phone;
-                this.phone2 = phone2;
-                this.date = date;
-                this.time_second = time_second;
+                countPhone++;
             }
         }
     }
