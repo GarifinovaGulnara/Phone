@@ -30,14 +30,14 @@
         {
             this.Base = new System.Windows.Forms.TextBox();
             this.Otchet = new System.Windows.Forms.Button();
-            this.textb_DataBegin = new System.Windows.Forms.TextBox();
             this.label_DataBegin = new System.Windows.Forms.Label();
             this.label_DataEnd = new System.Windows.Forms.Label();
-            this.textb_DataEnd = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.загрузитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textb_DataBegin = new System.Windows.Forms.DateTimePicker();
+            this.textb_DataEnd = new System.Windows.Forms.DateTimePicker();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,24 +46,18 @@
             this.Base.Location = new System.Drawing.Point(42, 107);
             this.Base.Multiline = true;
             this.Base.Name = "Base";
-            this.Base.Size = new System.Drawing.Size(523, 199);
+            this.Base.Size = new System.Drawing.Size(691, 199);
             this.Base.TabIndex = 0;
             // 
             // Otchet
             // 
-            this.Otchet.Location = new System.Drawing.Point(603, 343);
+            this.Otchet.Location = new System.Drawing.Point(636, 347);
             this.Otchet.Name = "Otchet";
             this.Otchet.Size = new System.Drawing.Size(97, 47);
             this.Otchet.TabIndex = 1;
             this.Otchet.Text = "Сформировать отчет";
             this.Otchet.UseVisualStyleBackColor = true;
-            // 
-            // textb_DataBegin
-            // 
-            this.textb_DataBegin.Location = new System.Drawing.Point(174, 53);
-            this.textb_DataBegin.Name = "textb_DataBegin";
-            this.textb_DataBegin.Size = new System.Drawing.Size(121, 20);
-            this.textb_DataBegin.TabIndex = 2;
+            this.Otchet.Click += new System.EventHandler(this.Otchet_Click);
             // 
             // label_DataBegin
             // 
@@ -77,18 +71,11 @@
             // label_DataEnd
             // 
             this.label_DataEnd.AutoSize = true;
-            this.label_DataEnd.Location = new System.Drawing.Point(314, 56);
+            this.label_DataEnd.Location = new System.Drawing.Point(384, 56);
             this.label_DataEnd.Name = "label_DataEnd";
             this.label_DataEnd.Size = new System.Drawing.Size(134, 13);
             this.label_DataEnd.TabIndex = 4;
             this.label_DataEnd.Text = "Дата окончания периода";
-            // 
-            // textb_DataEnd
-            // 
-            this.textb_DataEnd.Location = new System.Drawing.Point(465, 53);
-            this.textb_DataEnd.Name = "textb_DataEnd";
-            this.textb_DataEnd.Size = new System.Drawing.Size(100, 20);
-            this.textb_DataEnd.TabIndex = 5;
             // 
             // menuStrip1
             // 
@@ -114,12 +101,28 @@
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
             this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
+            this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
             // 
             // загрузитьToolStripMenuItem
             // 
             this.загрузитьToolStripMenuItem.Name = "загрузитьToolStripMenuItem";
             this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.загрузитьToolStripMenuItem.Text = "Загрузить";
+            this.загрузитьToolStripMenuItem.Click += new System.EventHandler(this.загрузитьToolStripMenuItem_Click);
+            // 
+            // textb_DataBegin
+            // 
+            this.textb_DataBegin.Location = new System.Drawing.Point(161, 56);
+            this.textb_DataBegin.Name = "textb_DataBegin";
+            this.textb_DataBegin.Size = new System.Drawing.Size(200, 20);
+            this.textb_DataBegin.TabIndex = 7;
+            // 
+            // textb_DataEnd
+            // 
+            this.textb_DataEnd.Location = new System.Drawing.Point(533, 56);
+            this.textb_DataEnd.Name = "textb_DataEnd";
+            this.textb_DataEnd.Size = new System.Drawing.Size(200, 20);
+            this.textb_DataEnd.TabIndex = 8;
             // 
             // Form1
             // 
@@ -127,9 +130,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.textb_DataEnd);
+            this.Controls.Add(this.textb_DataBegin);
             this.Controls.Add(this.label_DataEnd);
             this.Controls.Add(this.label_DataBegin);
-            this.Controls.Add(this.textb_DataBegin);
             this.Controls.Add(this.Otchet);
             this.Controls.Add(this.Base);
             this.Controls.Add(this.menuStrip1);
@@ -147,14 +150,14 @@
 
         private System.Windows.Forms.TextBox Base;
         private System.Windows.Forms.Button Otchet;
-        private System.Windows.Forms.TextBox textb_DataBegin;
         private System.Windows.Forms.Label label_DataBegin;
         private System.Windows.Forms.Label label_DataEnd;
-        private System.Windows.Forms.TextBox textb_DataEnd;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem загрузитьToolStripMenuItem;
+        private System.Windows.Forms.DateTimePicker textb_DataBegin;
+        private System.Windows.Forms.DateTimePicker textb_DataEnd;
     }
 }
 

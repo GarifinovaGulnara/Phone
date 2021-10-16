@@ -45,5 +45,26 @@ namespace Phone
                 Base.Text = File.ReadAllText(openTableAsTXT.FileName, Encoding.Default);
             }
         }
+
+        private void Otchet_Click(object sender, EventArgs e)
+        {
+            string[] allDan = Base.Text.Split(',');
+        }
+
+        struct Dann
+        {
+            public string phone;
+            public string phone2;
+            public DateTime date;
+            public int time_second;
+
+            public Dann (string phone, string phone2, DateTime date, int time_second)
+            {
+                this.phone = phone;
+                this.phone2 = phone2;
+                this.date = date;
+                this.time_second = time_second;
+            }
+        }
     }
 }
